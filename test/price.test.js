@@ -40,4 +40,7 @@ describe('calculate prices', function () {
   it('should calculate the cost of an empty basket', () => {
     expect(calculate(undefined, 0)).toBe(0);
   })
+  it('should calculate the cost if no quantity given', () => {
+    expect(calculate('A99', '')).toBe(0);
+  });
 });

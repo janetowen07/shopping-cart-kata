@@ -50,11 +50,11 @@ let getTotalOffer = (sku, quantity) => {
  * @returns The total cost of items
  */
 export const calculate = (sku, quantity) => {
-
   let total = 0;
 
   if (sku === '' || sku === null || sku === undefined) return 0;
-
+  if (quantity === '') return 0;
+  
   let calculatedResults = getTotalOffer(sku, quantity);
   total += products[sku] * calculatedResults.looseItems;
   total += calculatedResults.totalOffer;
