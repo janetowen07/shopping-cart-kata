@@ -8,11 +8,16 @@ let products = {
 export const calculate = (sku, quantity) => {
 
   let total = 0;
-  
+
+  if (quantity % 3 === 0 & sku === 'A99') {
+    let numberOfMultiples = quantity / 3;
+    return total = numberOfMultiples * 130;
+  }
+
   for(let item in products) {
-     if (item === sku) {
-       total = quantity * products[item]
-     }
+    if (item === sku) {
+      total = quantity * products[item]
+    }
   }
 
   return total;
