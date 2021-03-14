@@ -16,4 +16,7 @@ describe('calculate prices', function () {
   it('should calculate the cost of 4 apples', () => {
     expect(calculate('A99', 4)).toBe(180);
   });
+  it('should calculate the cost of 7 apples', () => {
+    expect(calculate('A99', 7)).toBe(310);
+  })
 });
