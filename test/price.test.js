@@ -43,4 +43,10 @@ describe('calculate prices', function () {
   it('should calculate the cost if no quantity given', () => {
     expect(calculate('A99', '')).toBe(0);
   });
+  it('should calculate the cost if no quantity given', () => {
+    expect(calculate('A99', null)).toBe(0);
+  });
+  it('should calculate the cost if no quantity given', () => {
+    expect(calculate('A99', undefined)).toBe(0);
+  });
 });
