@@ -1,7 +1,7 @@
-import add from '../src/price';
+import calculate from '../src/price';
 
-describe('adder tests', function () {
-  it('should return addition of two numbers', () => {
-    expect(add(1,1)).toBe(2);
+describe('calculate prices', function () {
+  it('should calculate the cost of an apple', () => {
+    expect(calculate('A99')).toBe(50);
   });
 });
