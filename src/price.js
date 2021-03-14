@@ -53,6 +53,8 @@ export const calculate = (sku, quantity) => {
 
   let total = 0;
 
+  if (sku === '') return 0;
+
   let calculatedResults = getTotalOffer(sku, quantity);
   total += products[sku] * calculatedResults.looseItems;
   total += calculatedResults.totalOffer;

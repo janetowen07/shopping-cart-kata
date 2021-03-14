@@ -31,4 +31,7 @@ describe('calculate prices', function () {
   it('should calculate the cost of 1 carrot', () => {
     expect(calculate('C40', 1)).toBe(60);
   })
+  it('should calculate the cost of an empty basket', () => {
+    expect(calculate('', 0)).toBe(0);
+  })
 });
